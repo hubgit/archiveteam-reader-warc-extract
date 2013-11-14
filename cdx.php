@@ -6,7 +6,9 @@ if (!file_exists($dir)) {
 	mkdir($dir, 0777, true);
 }
 
-foreach (glob(__DIR__ . '/data/pages/*.html') as $file) {
+$files = glob(__DIR__ . '/data/pages/*.html');
+
+foreach ($files as $file) {
 	$doc = new DOMDocument;
 	@$doc->loadHTMLFile($file);
 

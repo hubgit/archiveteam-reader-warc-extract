@@ -15,7 +15,9 @@ if (!file_exists($dir)) {
 
 $i = 1;
 
-foreach (glob(__DIR__ . '/data/cdx/*.cdx.gz') as $file) {
+$files = glob(__DIR__ . '/data/cdx/*.cdx.gz');
+
+foreach ($files as $file) {
 	print "Parsing $file\n";
 
 	$input = gzopen($file, 'r');
