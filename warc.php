@@ -7,7 +7,7 @@ if (!isset($argv[1])) {
 $needle = $argv[1];
 
 $sanitised_needle = preg_replace('/[^a-z0-9]/i', '_', $needle);
-$dir = __DIR__ . '/data/extract/' . $sanitised_needle;
+$dir = __DIR__ . '/data/warc/' . $sanitised_needle;
 
 if (!file_exists($dir)) {
 	mkdir($dir, 0777, true);
@@ -53,7 +53,7 @@ foreach (glob(__DIR__ . '/data/cdx/*.cdx.gz') as $file) {
 				continue;
 			}
 
-			$output_file = sprintf('%s/%d.txt', $dir, $i++);
+			$output_file = sprintf('%s/%d.warc', $dir, $i++);
 			print "\t\t=> $output_file\n";
 
 			file_put_contents($output_file, gzdecode($result));
