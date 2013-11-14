@@ -6,3 +6,4 @@
 1. `php extract.php needle` - extract feeds that match "needle"
 
 Output text files include WARC headers - currently need to clean those up manually.
+Each feed may be split over several output text files, each with a different "continuation" token in the URL.
