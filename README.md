@@ -1,4 +1,4 @@
-# Extract feeds from Archive Team Google Reader WARC files
+# Instructions
 
 1. `php indexes.php` - fetch all the [directory listings](https://archive.org/search.php?query=collection:archiveteam_greader)
 1. `php pages.php` - fetch each ["Archive Team Google Reader Grab" page](https://archive.org/details/archiveteam_greader_20130619020213).
